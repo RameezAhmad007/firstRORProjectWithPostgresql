@@ -1,0 +1,19 @@
+<h1>Blogs</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title%></td>
+        <td><%= blog.description%></td>
+        <td>define action</td>
+      </tr>
+    <%end %>
+  </tbody>
+</table>
