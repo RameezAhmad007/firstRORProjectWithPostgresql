@@ -1,0 +1,20 @@
+<% if @blog.errors.any? %>
+  <ul>
+    <% @blog.errors.full_messages.each do |err_message| %>
+      <li><%= err_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with(model: @blog, local: true, data: { turbo: false })  do |form| %>
+  <div>
+    <%= form.label :title %><br/>
+    <%=  form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :description %><br/>
+    <%=  form.text_area :description %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
